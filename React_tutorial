@@ -1,0 +1,74 @@
+
+1) React JS
+Reactjs- JS library for building user interfaces.
+
+React is actually user for maintaining trees of components and used for checking if something has changed.
+React DOM is actually responsible for rendering react page on real DOM.
+
+React can be used on any platform.
+
+2) What is react native
+
+React native is a collection of special elements. It knows how to compile these elements to native widgets based on platform
+IOS or android.
+It gives these widgets that can be compiled to native language.
+
+It gives access to native platform APIs like camera so that common tasks can be done.
+
+It gives tools to connect JS code to native platform code.
+
+Most of the code is written in JS. But React native also gives capability to write code in native language and connect it with JS 
+
+3) React JS + React native gives capability to compile a real native mobile app.
+
+4) How it works.
+
+So we have special component provided by react native like view and text.
+
+const App = props =>{
+    return (
+        <View>
+            <Text> Hello There </Text>  
+        </View>
+    )
+}
+
+this code is compiled to react native code. JS code is not compiled but the views are compiled to react native app.
+React native maps reusable component to respective platform equivalents.
+
+The logic part written in JS like HTTP calls are not converted to the react native code. It is running in the app hosted 
+by React Native app and is not compiled. It can talk with the native code for making app work according to the logic.
+JS code runs inside the app in a virtual machine and talks with native platform features.
+
+5) React Native CLI and Expo CLI tool
+
+Expo CLI: third party service(free)
+Managed App Development
+Lots of convenience and utility
+Simplifies Developmentyou are limited to expo ecosystem.
+
+React Native CLI:
+By recat native team
+Bare bone develpment only a basic setup is availble.
+almost co convenience or utility features
+full flexibility. Intgrate with native code.
+
+6) How expo works
+you will have native device simulator and your app configuration and code.
+On native simulator install expo client app that acts as wrapper for your react native app code.
+
+Expo app can be published in app store.
+
+7) Steps to install and run project
+
+a) Install expo-cli
+sudo npm install expo-cli --global
+
+b) Go to folder where you want to create your project
+
+expo init rn-first-app
+Go with blank template
+
+Navigate to your folder
+
+cd rn-first-app/
