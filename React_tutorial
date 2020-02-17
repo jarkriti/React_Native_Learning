@@ -109,3 +109,46 @@ const myTitle = props =>{
     );
     )
 }
+
+2) Stylesheet
+
+There is no CSS
+
+There are inline styles and stylesheet objects.
+
+It is written in JS
+
+It is based on CSS syntax but only subset of properties and features are supoorted.
+
+Stylesheet objects is preferred.
+
+3) Text can only be written inside Text component.
+
+4) View component is mainly used for styling and layouting.
+
+5) TextInput componnet is used for taking an input from user. Placeholder can be added.
+
+6) Button element is also present with title property for button display text.
+
+7) Style in react native elements is done by assigning JS object to style property.
+ JS object has property names similar to CSS.
+
+8) By default view uses flexbox. We can apply fexDirection to view. It can be row or column.
+
+9) View prganizes content by default from top to bottom in a flexbox.
+
+---------------------
+
+flexbox BASICS
+1) By default all views have flexbox layout.
+2) Default their direct is column.
+3) There are two axis. Main axis and cross axis. Main axis is the direction of flexbox axis and the other one is cross axis.
+4) justifyContent property is used for aligning contents in main axis.
+5) alignItems is used for aligning items in cross axis.
+6) By default, children item of flex view take the cross axis property of parent component. Like if parent view has
+    direction row and column property as stretch then child components will take that value.
+7) For setting the child property across the main axis, flex is used. It has numeric value and all child with flex property are taking
+    relative values. Like if there are two child component with flex 1 and 2, then first one will take 1/3 of space other will take
+    2/3 of space.
+8) By default if no justifyContent or alignItems property is present, componnets take only needed space for their content.
+
