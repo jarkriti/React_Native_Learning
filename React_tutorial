@@ -72,3 +72,40 @@ Go with blank template
 Navigate to your folder
 
 cd rn-first-app/
+
+8) useState: React hook
+
+const [outputText, setOutputText] = useState('Open up App.js to start working on your app!')
+
+Here outputText is a variable asisgned an initial state.
+setOutputText function will be used to set state of outputText variable.
+Whenever setOutputText function will be called page will be re rendered.
+
+onPress function is used instead of onClick for tracking button click event
+
+9) Setup android simulator
+
+10) Setup IOS simulator
+
+
+============================================================================
+
+BASICS
+
+1) Core components
+
+Built in react native components. translation to native UI widgets is provided by react native.
+Ex. View, Text, Button, Touchable, TextInput, Image
+
+UI custom componets can be made from core components.
+
+Ex.
+
+const myTitle = props =>{
+    return (
+        <View>  
+            <Text>{props.title}</Text>
+        </View>
+    );
+    )
+}
