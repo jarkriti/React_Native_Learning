@@ -150,5 +150,80 @@ flexbox BASICS
 7) For setting the child property across the main axis, flex is used. It has numeric value and all child with flex property are taking
     relative values. Like if there are two child component with flex 1 and 2, then first one will take 1/3 of space other will take
     2/3 of space.
-8) By default if no justifyContent or alignItems property is present, componnets take only needed space for their content.
+8) By default if no justifyContent or alignItems property is present, components take only needed space for their content.
+
+-------------------------
+
+Inline styles make code complex when code becomes bulky.
+Stylesheet.create should be used for creating stylesheet objects because it also helps in performance optimization. 
+Also, it suggests if any property goes wrong.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+ Basics of flexbox
+ stylesheet using stylesheet.create
+
+    <View style={styles.screen}>
+      <View style={styles.inputContainer}>
+        <TextInput placeholder="Course Goal" style={styles.input} />
+        <Button title="ADD" />
+      </View>
+      <View>
+
+      </View>
+    </View>
+
+    flexbox example
+      <View
+      style={{padding: 50, flexDirection: 'row', width: '100%', height: 300, justifyContent: 'space-around', alignItems:'stretch'}}>
+        <View style={{backgroundColor:'red', flex:1,justifyContent:'center',alignItems:'center'}}></View>
+        <View style={{backgroundColor:'blue', flex:1,justifyContent:'center',alignItems:'center'}}></View>
+        <View style={{backgroundColor:'green', flex:2,justifyContent:'center',alignItems:'center'}}></View>
+      </View>
+    );
+
+    -----------------------------------------------------------------------------------------------------------------------------
+
+
+    1. TextInput is used for taking user input.
+
+    All the data can be managed using react hooks.
+
+    useSate hook is used for creating initial state and passing a function to set that state value.
+
+    To store user input, first take a state variable using hooks.
+
+     const [enteredGoal,setEnteredGoal] = useState('');
+     Here enteredGoal is state variable and setEnteredGoal is the function used for setting enteredGoal.
+     Initial state is empty.
+
+    TextInput has property called as onChangeText. Pass a fucntion to execute on change of text.
+
+    const goalInputHandler = enteredText => {
+        setEnteredGoal(enteredText); //Here the state will change to the entered goal value.
+    };
+
+Two way binding is required. Whenever user enters value state should change and that state value should be reflected in textbox.
+
+Pass value parameter as state for that.
+
+2. Button has title property that tells what should be displayed on it.
+onPress property tells what should be done onPress of button.
+
+bind can be used for pasisng the default argument to the function.
+so when form one component to another data needs to be passed, it can be done using bind function.
+
+Function from one component to other can be passed using props.
+
+3. FlatList: Scrollable can be used of the list is not big. Since scrollable loads the entire list and renders it,
+it can cause performance issues. Instead FlatList can be used that renders only those values that are to be shown.
+
+It has data property that asks for array on which iteration is required.
+renderItem property that takes a function which return componnet that needs to be rendered.
+keyExtractor property is used for getting an unique id.
+It takes item and index and returns the id. For this array must have an id. If array has key then you don't need keyExtractor to spacifically
+mention the unique parameter. If key is not there in array then keyExtractor is needed.
+
+
+
 
